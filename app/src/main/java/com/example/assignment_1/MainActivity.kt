@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.assignment_1.adapter.MovieView
+import com.example.assignment_1.MovieView
 import com.example.assignment_1.databinding.ActivityMainBinding
 import com.example.assignment_1.Movie
 import com.example.assignment_1.MovieSearch
