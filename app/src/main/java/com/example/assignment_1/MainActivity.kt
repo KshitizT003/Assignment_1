@@ -1,13 +1,11 @@
 package com.example.assignment_1
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.assignment_1.MovieView
 import com.example.assignment_1.databinding.ActivityMainBinding
-import com.example.assignment_1.Movie
-import com.example.assignment_1.MovieSearch
 import kotlin.concurrent.thread
 
 class MainActivity : AppCompatActivity() {
@@ -32,7 +30,10 @@ class MainActivity : AppCompatActivity() {
                     runOnUiThread {
                         if (movieList.isNotEmpty()) {
                             val adapter = MovieView(movieList) { movie ->
-                                Toast.makeText(this, "Clicked: ${movie.Title}", Toast.LENGTH_SHORT).show()
+                                // Open details screen when movie clicked
+                                val intent = Intent(this, MovieDetailsActivity::class.java)
+                                intent.putExtra("imdbID", movie.imdbID)
+                                startActivity(intent)
                             }
                             binding.recyclerView.adapter = adapter
                         } else {
