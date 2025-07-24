@@ -1,6 +1,5 @@
 package com.example.assignment_1
 
-import com.example.assignment_1.Movie
 import org.json.JSONObject
 import java.net.HttpURLConnection
 import java.net.URL
