@@ -1,4 +1,4 @@
-package com.example.assignment_1.model
+package com.example.assignment_1
 
 data class Movie(
     val Title: String,
