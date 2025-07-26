@@ -8,14 +8,17 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:text="🎬 Movie Search"
-        android:textSize="24sp"
+        android:id="@+id/titleIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/fa_solid_900"
+        android:text="\uf008 Movie Search"
+        android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="#1A237E"
-        android:layout_marginBottom="16dp"
         android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_marginBottom="16dp" />
+
 
     <EditText
         android:id="@+id/searchInput"

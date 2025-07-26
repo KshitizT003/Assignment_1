@@ -1,9 +1,10 @@
-package com.example.assignment_1
+package com.example.assignment_1.part_1
 
 import org.json.JSONObject
 import java.net.HttpURLConnection
 import java.net.URL
 
+// Creating an object to handle movie search from the OMDb API
 object MovieSearch {
 
     // Function to search for movies using the OMDb API
@@ -27,6 +28,7 @@ object MovieSearch {
             List(searchArray.length()) { i ->
                 val item = searchArray.getJSONObject(i)
 
+                // Returning a list of Movie data using values from JSON
                 Movie(
                     Title = item.getString("Title"),
                     Year = item.getString("Year"),
